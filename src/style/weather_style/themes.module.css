@@ -1,0 +1,33 @@
+
+
+.univesal_colors{
+  --weather-gradient-1: linear-gradient(135deg, var(--weather-box-color),var(--weather-color-2));
+  --weather-wind-icon: "/src/img/universal/navigation.png";
+}
+
+.dark_theme{
+  --weather-color-1: #383838;
+  --weather-color-2: #000;
+  --weather-box-color: #444;
+  --weather-box-shadow: black; /* Boreder */
+  --weather-hourly-item-color: #373636;
+  --weather-text-color-1: #fff;
+  --weather-list-border-1: #555;
+  --weather-search-color: transparent;
+  
+  --weather-gradient-2: linear-gradient(45deg, white, #0000);
+}
+
+.light_theme{
+  --weather-color-1: #fff;
+  --weather-color-2: #466173;
+  --weather-box-color: #D9D9D9;
+  --weather-box-shadow: #292929;
+  --weather-hourly-item-color: #fff;
+  --weather-text-color-1: #292929;
+  --weather-list-border-1: #aaa;
+  --weather-search-color: black;
+  --weather-gradient-2: linear-gradient(45deg, #292929, #0000);
+  --weather-day-gradient-1: linear-gradient(170deg, #f88508, #f6fad9);
+  --weather-night-gradient-1: linear-gradient(170deg, #443D64, #6582C6);
+}
