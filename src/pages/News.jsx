@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../utils/AppProvider";
+import React, { useEffect, useState } from "react";
+import { useAppContext } from "../utils/AppProvider";
 import style from "../style/new.module.css"
 import NewsCategorie from "../components/NewsCategories";
 import { NavLink } from "react-router-dom";
 
 const News = () => {  
-    const {dataNews, dataUpdate} = useContext(AppContext);
+    const {dataNews, updateNews} = useAppContext();
     const [inputValue, inputUpdate] = useState("");
     //   console.log(newsData);  
 
     const fetchData = async () => {    
         try {      
-            await dataUpdate(inputValue);
+            await updateNews(inputValue);
         } catch (error) {      
             console.error(error);    
         }  

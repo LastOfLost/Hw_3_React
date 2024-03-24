@@ -1,20 +1,19 @@
 import React from "react";
 import { useAppContext } from "../../utils/AppProvider";
 import s from "../../style/weather_style/weather.module.css";
-import { Select } from "@mui/material";
 import { formatTime } from "../../utils/formateDateTime";
 import nav_icon from "../../img/universal/navigation.png";
 
 const HourlyForecast = (props) =>{
 
-    const {weatherIndex, isDarkMode} = useAppContext();
-    const {hourlyForecast} = props;
+    const {indexWeather, isDarkMode} = useAppContext();
+    const {forecastday} = props;
 
-    if(!hourlyForecast){
+    if(!forecastday){
         return;
     }
 
-    const currentForecast = hourlyForecast[weatherIndex].hour;
+    const currentForecast = forecastday[indexWeather].hour;
 
     const isNightTime = (time) => {
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { useAppContext } from "../../utils/AppProvider";
 import { formatDate, formatTime } from "../../utils/formateDateTime";
 import s from "../../style/weather_style/weather.module.css";
 

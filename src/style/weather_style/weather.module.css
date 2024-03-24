@@ -54,7 +54,7 @@
     margin-left: 15px;
   }
   50% {
-    margin-left: 25px;
+    margin-left: 35px;
   }
   from {
     margin-left: 15px;
@@ -63,7 +63,7 @@
 
 .error input{
   color: red;
-  animation: inputAnimation 0.2s;
+  animation: inputAnimation 0.15s;
 }
 .successfully input{
   color: green;

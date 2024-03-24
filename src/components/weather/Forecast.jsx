@@ -4,15 +4,15 @@ import s from "../../style/weather_style/weather.module.css";
 import { formatDate } from "../../utils/formateDateTime";
 
 const Forecast = (props) =>{
-    const {forecast} = props;
+    const {forecastday} = props;
     const {updateWeatherIndex} = useAppContext();
 
-    if(!forecast){
+    if(!forecastday){
         return null;
     }
     
     const onClickForecast = function(e){
-        const currentForecastIndex = forecast.findIndex((x) => {
+        const currentForecastIndex = forecastday.findIndex((x) => {
             return x.date === e.currentTarget.id;
         });
 
@@ -22,7 +22,7 @@ const Forecast = (props) =>{
     return(
         <div className={`${s.forecast_box} ${s.container} ${s.container_box}`}>
             <p className={s.forecast_title}>5 Days Forecast:</p>
-            <div>{forecast.map((x) => {
+            <div>{forecastday.map((x) => {
                 return(
                     <div onClick={onClickForecast} 
                         className={s.forecast_item_box}
