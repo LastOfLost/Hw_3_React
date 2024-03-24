@@ -68,8 +68,13 @@ export default function Weather() {
     toogleThemeMode();
   }
 
-  useEffect(() => {
+  const timerUpdate = function(){
     fetchData();
+    setTimeout(() => {timerUpdate();}, 600000);
+  }
+
+  useEffect(() => {
+    timerUpdate();
   },[])
   
 

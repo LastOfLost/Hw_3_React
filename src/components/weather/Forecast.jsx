@@ -5,7 +5,7 @@ import { formatDate } from "../../utils/formateDateTime";
 
 const Forecast = (props) =>{
     const {forecastday} = props;
-    const {updateWeatherIndex} = useAppContext();
+    const {updateIndex} = useAppContext();
 
     if(!forecastday){
         return null;
@@ -16,7 +16,7 @@ const Forecast = (props) =>{
             return x.date === e.currentTarget.id;
         });
 
-        updateWeatherIndex(currentForecastIndex);
+        updateIndex(currentForecastIndex);
     }
 
     return(
